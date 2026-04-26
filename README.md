@@ -37,6 +37,7 @@ Built with plain HTML, CSS, and a tiny bit of JavaScript — no frameworks, no b
 ├── contact.html        ← Call/WhatsApp/Email + form
 ├── robots.txt          ← Search engine instructions
 ├── sitemap.xml         ← Helps Google index every page
+├── .nojekyll           ← Tells GitHub Pages not to run Jekyll (static files as-is)
 ├── site.webmanifest    ← PWA / Add-to-Home-Screen
 ├── css/style.css       ← All styles
 ├── js/main.js          ← Mobile menu + smooth scroll
@@ -164,7 +165,13 @@ Drag-and-drop this folder onto https://app.netlify.com/drop → done.
 
 ### Option C: GitHub Pages
 
-Push to a GitHub repo → Settings → Pages → Deploy from main branch → done.
+1. Create a repo on GitHub and push this project (`main` branch).
+2. **Settings → Pages** → **Build and deployment**: Source = **Deploy from a branch**, Branch = **`main`** → folder **`/ (root)`** → Save.
+3. After ~1–2 minutes the site is live at **`https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/`**.
+
+This repo uses **relative paths** for navigation, favicon, and manifest so it works both on that URL and on a **custom domain** (e.g. `zeeshanalisecurity.com`) later. A **`.nojekyll`** file is included so GitHub does not skip or process files with Jekyll.
+
+**Custom domain:** After you connect the domain under **Pages → Custom domain**, keep `canonical` / `sitemap.xml` / JSON-LD pointed at the final `https://…` URL you want Google to index.
 
 ---
 
