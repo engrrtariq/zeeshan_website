@@ -14,7 +14,7 @@ Built with plain HTML, CSS, and a tiny bit of JavaScript — no frameworks, no b
 - **Local SEO**: LocalBusiness schema, multi-region areaServed (Pakistan + cities)
 - **Mobile-first**: sticky floating call button on phones
 - **Coverage section**: clearly shows Sindh, Balochistan, Punjab, KPK reach
-- **Contact form**: ready to wire up to Formspree (free)
+- **Contact form**: FormSubmit → emails `zeeshankaleri328@gmail.com`
 
 ## Pre-filled details
 
@@ -25,7 +25,7 @@ Built with plain HTML, CSS, and a tiny bit of JavaScript — no frameworks, no b
 | Email | zeeshankaleri328@gmail.com |
 | Base city | Karachi |
 | Service area | All Pakistan (Sindh, Balochistan, Punjab, KPK) |
-| Domain (placeholder) | `zeeshanalisecurity.com` *(not registered yet — see below)* |
+| Planned domain (SEO) | `zeeshanalisecurity.com` *(update meta/sitemap when you register)* |
 
 ## File structure
 
@@ -74,78 +74,21 @@ Then on your phone visit `http://<that-ip>:8000` — best way to feel the mobile
 
 ---
 
-## Things still to do (in order of importance)
+## Optional next steps
 
-### 1. Pick & buy a domain (~$10/year)
+### 1. Custom domain (~$10/year)
 
-The site currently uses `zeeshanalisecurity.com` as a placeholder for SEO URLs.
-Suggested domains to check:
+SEO URLs use `zeeshanalisecurity.com`. When you register a domain, connect it in your host's dashboard and, if the name changes, update `canonical` links, `sitemap.xml`, and JSON-LD in the HTML files.
 
-- `zeeshanalisecurity.com`  ← matches placeholder, no edits needed
-- `zasecurity.pk`
-- `zeeshanali.pk`
-- `karachibodyguard.com`
+### 2. Contact form (first-time setup)
 
-**Where to buy:** Cloudflare Registrar (cheapest, no upsells), Namecheap, or GoDaddy.
+The form uses **FormSubmit** and delivers to `zeeshankaleri328@gmail.com`. On the **first** submission, FormSubmit sends a **confirmation link** to that inbox — open it once so future enquiries go through.
 
-If he picks a *different* domain, do a project-wide find/replace on `zeeshanalisecurity` and replace with the new name (without the `.com`). In Cursor: `Cmd+Shift+H`.
+### 3. Small edits anytime
 
-### 2. Add real photos
-
-The site uses styled placeholder boxes labeled "VIP Protection", "Event Security", etc. Replace with real photos:
-
-| File needed | Size | Where it shows |
-|---|---|---|
-| `assets/og-image.jpg` | **1200×630** | WhatsApp/Facebook link previews — **THIS ONE MATTERS MOST** |
-| `assets/hero.jpg` | 1920×1080 | Could use as hero background |
-| `assets/about-portrait.jpg` | 800×1000 | About page |
-| `assets/service-vip.jpg`, etc. | 800×600 | Each service block |
-
-**For the OG image**: a great photo of Zeeshan in professional attire (suit, sunglasses) with text overlay "Zeeshan Ali Security · Karachi · All Pakistan · +92 305 3199282" is ideal. This is what shows up when his link is shared on WhatsApp.
-
-**To replace placeholders in HTML**, find lines like:
-```html
-<div class="service-img"><div class="img-placeholder">VIP Protection</div></div>
-```
-And swap with:
-```html
-<div class="service-img">
-  <img src="assets/service-vip.jpg" alt="Zeeshan Ali providing VIP close-protection in Karachi" loading="lazy" />
-</div>
-```
-
-Compress images first at [squoosh.app](https://squoosh.app) — keep under 200KB each.
-
-### 3. Wire up the contact form
-
-The form on `contact.html` posts to `https://formspree.io/f/YOUR_FORM_ID`.
-
-1. Go to [formspree.io](https://formspree.io) → sign up free
-2. Create a new form, copy your form ID (e.g. `xyzabcde`)
-3. In `contact.html`, find `YOUR_FORM_ID` and replace with the real one
-4. Submissions will email Zeeshan at `zeeshankaleri328@gmail.com`
-
-### 4. Personalize the About page
-
-In `about.html`, the "Personal Note" section says:
-> Add a 2–3 sentence personal story here…
-
-Ask Zeeshan for:
-- His background (military / police / private security / years of experience)
-- Why he got into protection
-- What drives him
-
-Drop those 2-3 sentences in. **This is what builds real trust** with potential clients.
-
-### 5. Replace placeholder testimonials
-
-In `index.html` there are 3 sample testimonials with fake initials (A. Khan, M. Raza, S. Ahmed). Replace with real client quotes once Zeeshan collects them. Even one real quote is better than three fake ones.
-
-### 6. Update the pricing (or remove)
-
-In `services.html` there's a 3-tier pricing block (PKR 5,000 / 10 hrs, PKR 7,000 / 24 hrs, from PKR 49,000/week). Adjust anytime. Either:
-- Replace with Zeeshan's actual rates, or
-- Remove the pricing section entirely if he prefers "call for quote"
+- **About:** Personal note is in `about.html`.
+- **Pricing:** Three cards in `services.html`.
+- **Images:** Compress JPEGs at [squoosh.app](https://squoosh.app). For rich WhatsApp/Facebook previews, use a **1200×630** image and point each page's `og:image` meta tag at it.
 
 ---
 
@@ -207,7 +150,7 @@ This is what actually gets him calls. The website alone is only half the job.
 - Create Page → Local Business / Security
 - Use the same logo (`assets/logo.svg`)
 - Link the website
-- Post weekly: job photos (with permission), security tips, testimonials
+- Post weekly: job photos (with permission), security tips, client wins (with permission)
 
 ### E. WhatsApp Business
 

@@ -365,24 +365,6 @@ h3 { font-size: clamp(1.15rem, 1vw + .8rem, 1.4rem); font-family: 'Inter', sans-
 .feature h3 { color: var(--accent); margin-bottom: .5rem; }
 .feature p { color: var(--text-muted); font-size: .95rem; }
 
-/* ---------- Testimonials ---------- */
-.testimonial {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 2rem;
-  position: relative;
-}
-.testimonial::before {
-  content: """;
-  position: absolute; top: -10px; left: 16px;
-  font-family: 'Playfair Display', serif;
-  font-size: 5rem; line-height: 1;
-  color: var(--accent); opacity: .3;
-}
-.testimonial p { font-style: italic; color: var(--text); }
-.testimonial footer { color: var(--accent); font-weight: 600; font-size: .9rem; margin-top: 1rem; }
-
 /* ---------- Coverage ---------- */
 .coverage-grid {
   display: grid;
