@@ -143,7 +143,7 @@ In `index.html` there are 3 sample testimonials with fake initials (A. Khan, M. 
 
 ### 6. Update the pricing (or remove)
 
-In `services.html` there's a 3-tier pricing block (PKR 3,500/hr, PKR 25,000/day, custom). These are guesses. Either:
+In `services.html` there's a 3-tier pricing block (PKR 5,000 / 10 hrs, PKR 7,000 / 24 hrs, from PKR 49,000/week). Adjust anytime. Either:
 - Replace with Zeeshan's actual rates, or
 - Remove the pricing section entirely if he prefers "call for quote"
 
